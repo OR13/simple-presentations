@@ -1,0 +1,195 @@
+{
+  "status": "UNLOCKED",
+  "contents": [
+    {
+      "@context": ["http://w3id.org/wallet/v1"],
+      "id": "urn:digest:3aaf06d7e4280e6709818075f7b9b98e487f5131f2d84615878bf35797cfd04f",
+      "name": "DID Key Secret",
+      "image": "https://via.placeholder.com/150",
+      "description": "Used to generate a DID with a signing and encryption key.",
+      "tags": ["inception"],
+      "type": "Entropy",
+      "value": "1fa4001835415a644858914d304227f8e8bc4baa45401d716c2f24686619fa1c"
+    },
+    {
+      "id": "did:key:z6MkicsBqGnqMj3MdWMxwc97ews8MHZyf4rQaPhUWUhvxgU4#z6MkicsBqGnqMj3MdWMxwc97ews8MHZyf4rQaPhUWUhvxgU4",
+      "type": "JsonWebKey2020",
+      "controller": "did:key:z6MkicsBqGnqMj3MdWMxwc97ews8MHZyf4rQaPhUWUhvxgU4",
+      "publicKeyJwk": {
+        "crv": "Ed25519",
+        "x": "PeS11V3RJZQ6CN3eYT6ljvU4YLlfd23htzPDIWEBbsU",
+        "kty": "OKP"
+      },
+      "privateKeyJwk": {
+        "crv": "Ed25519",
+        "d": "H6QAGDVBWmRIWJFNMEIn-Oi8S6pFQB1xbC8kaGYZ-hw",
+        "x": "PeS11V3RJZQ6CN3eYT6ljvU4YLlfd23htzPDIWEBbsU",
+        "kty": "OKP"
+      },
+      "@context": ["http://w3id.org/wallet/v1"],
+      "name": "Signing Key",
+      "image": "https://via.placeholder.com/150",
+      "description": "Used to produce digital signatures.",
+      "tags": ["inception"],
+      "generatedFrom": [
+        "urn:digest:3aaf06d7e4280e6709818075f7b9b98e487f5131f2d84615878bf35797cfd04f"
+      ]
+    },
+    {
+      "id": "did:key:z6MkicsBqGnqMj3MdWMxwc97ews8MHZyf4rQaPhUWUhvxgU4#z6LSoPgjPXuu3PoFoQurxR5Lx8gKWnwa6h9ZwSxifHGRh3HP",
+      "type": "JsonWebKey2020",
+      "controller": "did:key:z6MkicsBqGnqMj3MdWMxwc97ews8MHZyf4rQaPhUWUhvxgU4",
+      "publicKeyJwk": {
+        "kty": "OKP",
+        "crv": "X25519",
+        "x": "rhLM7JMVwsVADbg0oZIqSXotmoy98NrPRRMVOm-VOB4"
+      },
+      "privateKeyJwk": {
+        "kty": "OKP",
+        "crv": "X25519",
+        "d": "OK6hn3zwMHW_f1ibua9ihNtLYNWA-7sv8xkkgAJ8mGE",
+        "x": "rhLM7JMVwsVADbg0oZIqSXotmoy98NrPRRMVOm-VOB4"
+      },
+      "@context": ["http://w3id.org/wallet/v1"],
+      "name": "Encryption Key",
+      "image": "https://via.placeholder.com/150",
+      "description": "Used to derive symmetric keys for encryption.",
+      "tags": ["inception"],
+      "generatedFrom": [
+        "urn:digest:3aaf06d7e4280e6709818075f7b9b98e487f5131f2d84615878bf35797cfd04f"
+      ]
+    },
+    {
+      "type": "FlowRequirements",
+      "authorized": {
+        "IntentToSellProductCategory": [
+          "IntentToSell",
+          "ProductCertificate",
+          "InvoiceCertificate",
+          "ShippingCertificate"
+        ]
+      }
+    },
+    {
+      "type": "AuthorizedFlows",
+      "authorized": {
+        "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw": [
+          "IntentToSellProductCategory"
+        ]
+      }
+    },
+    {
+      "type": "PresentationChallenges",
+      "pending": {}
+    },
+    {
+      "type": "FlaggedForReview",
+      "presentations": [
+        {
+          "@context": ["https://www.w3.org/2018/credentials/v1"],
+          "type": ["VerifiablePresentation"],
+          "holder": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw",
+          "verifiableCredential": [
+            {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                {
+                  "IntentToSell": "https://example.com/IntentToSell"
+                }
+              ],
+              "id": "https://example.com/credentials/123",
+              "type": ["VerifiableCredential"],
+              "issuer": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw",
+              "issuanceDate": "2019-12-03T12:19:52Z",
+              "credentialSubject": {
+                "id": "did:example:456"
+              },
+              "proof": {
+                "type": "Ed25519Signature2018",
+                "created": "2021-03-28T18:09:11.620Z",
+                "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..4wMqKSVhHuYT-O6A52Ja8hllzxbQMTQwjkoLZmqua5zt4RMRnB11ySd4COAmsCEVCfqYVglvdY8rQRNn2aVWDQ",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw#z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw"
+              }
+            },
+            {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                {
+                  "ProductCertificate": "https://example.com/ProductCertificate"
+                }
+              ],
+              "id": "https://example.com/credentials/123",
+              "type": ["VerifiableCredential"],
+              "issuer": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw",
+              "issuanceDate": "2019-12-03T12:19:52Z",
+              "credentialSubject": {
+                "id": "did:example:456"
+              },
+              "proof": {
+                "type": "Ed25519Signature2018",
+                "created": "2021-03-28T18:09:11.681Z",
+                "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..D2lyKbnuui6Hm951QTs1gUrzCH5ifWuOs7AuhmV_KJ32OEMiGKbn00MPDqdwC8XQD1o_KCzvfjydHinMDuJuCw",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw#z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw"
+              }
+            },
+            {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                {
+                  "InvoiceCertificate": "https://example.com/InvoiceCertificate"
+                }
+              ],
+              "id": "https://example.com/credentials/123",
+              "type": ["VerifiableCredential"],
+              "issuer": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw",
+              "issuanceDate": "2019-12-03T12:19:52Z",
+              "credentialSubject": {
+                "id": "did:example:456"
+              },
+              "proof": {
+                "type": "Ed25519Signature2018",
+                "created": "2021-03-28T18:09:11.734Z",
+                "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..30HTVcKi5y2BUvy6hGgA0PjmInfof1-C6SNO9zmf1QIVb32QA3niIaPyJofZ8IAfx057hziWGs5O2_bqoks7Dw",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw#z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw"
+              }
+            },
+            {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                {
+                  "ShippingCertificate": "https://example.com/ShippingCertificate"
+                }
+              ],
+              "id": "https://example.com/credentials/123",
+              "type": ["VerifiableCredential"],
+              "issuer": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw",
+              "issuanceDate": "2019-12-03T12:19:52Z",
+              "credentialSubject": {
+                "id": "did:example:456"
+              },
+              "proof": {
+                "type": "Ed25519Signature2018",
+                "created": "2021-03-28T18:09:11.783Z",
+                "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..NEc3XQqELX4mUfPOidNfq2xEmMYgp6cMXR5qj0wT_bIy-BqTtLhyYLrTECdnzdMtpsCtr7KdD4c0B2QGHy_zBg",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw#z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw"
+              }
+            }
+          ],
+          "proof": {
+            "type": "Ed25519Signature2018",
+            "created": "2021-03-28T18:09:11.852Z",
+            "challenge": "288c85dc-3631-4727-b168-e6ea3a191a9d",
+            "domain": "bob.example.com",
+            "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..AracHJD4Xi0pNDnygqCK8_QGF_7F8K9aTkCmKcvCepq2cnpmuvP8a9kDgIhHA8vIN6tWyDkzsIF0KH60IOxGDA",
+            "proofPurpose": "authentication",
+            "verificationMethod": "did:key:z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw#z6MkseybELFb2FJRp5hrHP92RPJzHMeLmnYLRAUHatqanjuw"
+          }
+        }
+      ]
+    }
+  ]
+}
