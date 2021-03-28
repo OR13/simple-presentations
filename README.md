@@ -122,11 +122,11 @@ Bob's wallet contains [Flow Requirements](#flow-requirements) and [Authorized Fl
 
 When Alice needs to ship product to the US, she use the [VP Request Spec](https://w3c-ccg.github.io/vp-request-spec) and the associated [VC HTTP API](https://github.com/w3c-ccg/vc-http-api) endpoints to provide a verifiable presentations of the required credentials to Bob.
 
-Bob is able to use software that automatically verfies that Alice is allowed to submit digital documentation and that the documentation has th required data elements.
+Bob is able to use software that automatically verifies that Alice is allowed to submit digital documentation and that the documentation has the required data elements.
 
 Bob's software is also able to flag specifc presentations for further review, even if they meet the specified requirements.
 
-Working together with Bob, Alice is able to quickly import steel into the United States and consumers can able to trust that their cars are constructed from safe ingredients and that trade agreements are being enforced appropriatly for products made inside and outside the United States.
+Working together with Bob, Alice is able to quickly import steel into the United States and consumers are able to trust that their cars are constructed from safe ingredients and that trade agreements are being enforced appropriatly for products made inside and outside the United States.
 
 ### Defending Against Fraud and Supply Chain Attacks
 
@@ -140,9 +140,11 @@ These tests show how verifiable credentials and authorized parties can be combin
 
 The VC HTTP API defines endpoints compatible with this proposal.
 
-The objects described in this specification are not only way to implement the VC HTTP API.
+The objects described in this specification are not the only way to implement this flow over the VC HTTP API.
 
 Many of the objects described here are likely to be dynamically generated in an advanced setting as a result of database queries.
+
+The VC HTTP API is not the only way that this flow might occure, and we are investigating alterantives to it.
 
 ## Alternatives
 
