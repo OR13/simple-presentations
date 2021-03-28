@@ -118,7 +118,7 @@ If steel import documentation is fraudulent, trade agreements cannot be enforced
 
 Alice registers with Bob to be able to automatically provide verifiable credentials associated with steel imports.
 
-Bob's wallet contains [Flow Requirements](#FlowRequirements) and [Authorized Flows](#AuthorizedFlows) necessary to validate Alice's steel import documentation automatically.
+Bob's wallet contains [Flow Requirements](#flow-requirements) and [Authorized Flows](#authorized-flows) necessary to validate Alice's steel import documentation automatically.
 
 When Alice needs to ship product to the US, she use the [VP Request Spec](https://w3c-ccg.github.io/vp-request-spec) and the associated [VC HTTP API](https://github.com/w3c-ccg/vc-http-api) endpoints to provide a verifiable presentations of the required credentials to Bob.
 
