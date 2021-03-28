@@ -67,12 +67,14 @@ describe('Alice presents credentials to Bob', () => {
       aliceIntentQuery
     );
     const presentationIndex = `urn:${bobsChallengeForAliceIntentQuery.domain}:${bobsChallengeForAliceIntentQuery.challenge}`;
-    bobWallet.add({
+    const pendingObject = {
       type: verifyPresentationChallengesObjectName,
       pending: {
         [presentationIndex]: bobsChallengeForAliceIntentQuery,
       },
-    });
+    };
+    bobWallet.add(pendingObject);
+    // console.log(JSON.stringify(pendingObject, null, 2));
   });
 
   // bob replies to alice with his challenge
